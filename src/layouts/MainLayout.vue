@@ -13,9 +13,7 @@
 
         <header-link v-for="(menu, index) in menus['header']" :key="index" :label="menu.meta.title" :to="menu.path" />
 
-        <q-btn class="q-ml-md sign-in bn-button" :class="{ 'bg-positive': walletId, 'bg-accent': !walletId }" color="accent" padding="xs lg" @click="onClickConnect">
-          <span class="ellipsis q-px-md text-weight-bold">{{ getWalletText }}</span>
-        </q-btn>
+        <connect-btn />
 
       </q-toolbar>
     </q-header>
@@ -32,9 +30,10 @@
 import HeaderLink from 'src/components/HeaderLink'
 import { mapGetters } from 'vuex'
 import FooterLayout from './Footer'
+import ConnectBtn from 'src/components/ConnectBtn'
 
 export default {
-  components: { HeaderLink, FooterLayout },
+  components: { HeaderLink, FooterLayout, ConnectBtn },
 
   data () {
     return {
@@ -47,10 +46,6 @@ export default {
       'walletId',
       'networkId'
     ]),
-    getWalletText() {
-      let text = 'Connect Wallet'
-      return this.walletId && this.networkId !== 0 ? this.walletId : text
-    }
   },
 
   created() {
