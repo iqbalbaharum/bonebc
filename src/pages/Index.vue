@@ -30,8 +30,8 @@
                   />
                 </div>
               </div>
-              <q-card class="bn-card col-md-5 col-xs-12 q-pa-sm bg-yellow-2" v-for="(project, index) in projects" :key="index">
-                <q-card-section horizontal @click="onClickProject(project.id)" class="cursor-pointer">
+              <q-card class="bn-card col-md-5 col-xs-12 q-pa-sm bg-yellow-2 cursor-pointer" v-for="(project, index) in projects" :key="index">
+                <q-card-section horizontal>
                   <q-card-section avatar>
                     <q-avatar square size="80px">
                       <q-img src="~assets/main/rd-logo.png" />
@@ -43,6 +43,12 @@
                     <div class="q-gutter-x-sm">
                       <q-badge rounded color="accent">BNB</q-badge>
                     </div>
+                  </q-card-section>
+
+                  <q-space />
+
+                  <q-card-section>
+                    <q-btn color="primary" label="Details" @click="onClickProject(project.id)"/>
                   </q-card-section>
                 </q-card-section>
 
@@ -102,20 +108,6 @@
             </div>
           </div>
         </div>
-        <div class="bn-block">
-          <div class="items-center justify-center">
-            <div class="row q-my-md q-gutter-md justify-center">
-              <div class="col-md-12 q-py-md text-center">
-                <div class="text-weight-bold text-h3">Featured Alumni</div>
-              </div>
-            </div>
-            <div class="row items-center">
-              <div class="col q-pa-md text-center">
-                <q-img src="~assets/logos/fomolab_logo.png" style="width: 20%;height:auto" />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     
@@ -134,7 +126,7 @@ export default {
           id: 1,
           icon: 'https://cdn.quasar.dev/img/avatar.png',
           title: 'RD Token',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus velit, cursus eget ultrices eget, aliquet vel risus. Aenean blandit eleifend tincidunt. Praesent viverra malesuada cursus. Morbi neque nunc, interdum et tempus vitae, sodales nec ante. Fusce lobortis eget sem vel viverra. Aliquam fermentum lectus id nulla vulputate laoreet. Nunc ac enim in nibh efficitur fringilla ac faucibus mauris. Ut posuere molestie convallis. Sed ac purus nec erat varius tempus. Suspendisse a fringilla erat. Morbi vel mauris arcu. Aenean non finibus ex. Nam a finibus nisi. Integer nec arcu vel neque vehicula vehicula id sit amet metus.',
+          description: 'The RD Token is the crypto engine which powers everything related to RD Labs, Auditors and Ventures. Holding this token will give you access to early stage investment allocations, content and regular tutorials covering all aspects of crypto, AMA´s and options to interact with other RD Familia members within the ecosystem.',
           currentVote: 10,
           totalVote: 90,
           maxBuy: 0.19,

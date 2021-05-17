@@ -11,11 +11,11 @@
       <div class="col-md-1">&nbsp;</div>
     
       <div class="col-md-4 col-sm-12 q-gutter-y-md">
-        <div class="q-pa-md bn-bg-gradient-1">
-          <div class="text-body1 text-grey-8">Auditor Certification</div>
-          <div class="text-h5 text-weight-bold text-white">RD Auditors</div>
-          <div class="text-caption text-grey-8">11 April 2021</div>
-        </div>
+        <q-card class="bg-auditor-block q-pa-md q-pl-xl">
+          <div>Auditor Certification</div>
+          <div class="text-h5 text-weight-bold text-primary">Rug Detective</div>
+          <div class="text-caption">April 14th 2021</div>
+        </q-card>
       </div>
   </div>
 </template>

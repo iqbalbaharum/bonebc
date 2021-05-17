@@ -47,7 +47,7 @@
             <q-card class="bn-card q-pa-md">
 
               <q-card-section class="q-gutter-y-md">
-                <div class="text-weight-bold text-black">Open in</div>
+                <div class="text-weight-bold text-black">Coming soon</div>
                 <div class="text-h4">
                   <flip-countdown v-if="project.openDate" :deadline="project.openDate" @@timeElapsed="onTimeElapsed" />
                 </div>

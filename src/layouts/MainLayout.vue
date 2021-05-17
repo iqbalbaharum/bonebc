@@ -1,21 +1,22 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="q-mb-lg">
-      <q-toolbar class="bg-white text-black">
+    <q-header elevated class="bg-white q-mb-lg">
+      <div class="bn-block">
+        <q-toolbar class="bg-white text-black">
+          
+          <q-btn to="/" flat dense>
+            <q-avatar size="80px">
+              <q-img src="~assets/main/logo.jpeg" />
+            </q-avatar>
+          </q-btn>
+
+          <q-space />
+          <header-link v-for="(menu, index) in menus['header']" :key="index" :label="menu.meta.title" :to="menu.path" />
+
+          <connect-btn />
         
-        <q-btn to="/" flat dense>
-          <q-avatar size="80px">
-            <q-img src="~assets/main/logo.jpeg" />
-          </q-avatar>
-        </q-btn>
-
-        <q-space />
-
-        <header-link v-for="(menu, index) in menus['header']" :key="index" :label="menu.meta.title" :to="menu.path" />
-
-        <connect-btn />
-
-      </q-toolbar>
+        </q-toolbar>
+      </div>
     </q-header>
 
     <q-page-container>

@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-py-md">
-    <div class="bn-screen full-width">
+    <div class="full-width">
         <div class="bn-block q-gutter-y-md">
           <div class="text-h4 text-secondary text-weight-bold">All Pools - All</div>
           <div class="row">
@@ -44,7 +44,7 @@
               <q-item class="bn-card q-py-md">
                 <q-item-section avatar>
                   <q-avatar>
-                    <img src="https://cdn.quasar.dev/img/avatar.png">
+                    <q-img src="~assets/main/rd-logo.png" />
                   </q-avatar>
                 </q-item-section>
                 <q-item-section class="col-4 ellipsis">
@@ -73,6 +73,20 @@
                 </q-item-section>
               </q-item>
             </q-list>
+          </div>
+        </div>
+      </div>
+
+      <div class="q-mt-lg full-width flex flex-center">
+        <div class="bn-block">
+          <div class="row items-center justify-center">
+            <div class="col-md-6 q-py-md text-center">
+              <q-img src="~assets/pools/pool-img.png" />
+            </div>
+            <div class="col-md-6 q-py-md text-center q-gutter-y-md">
+                <div class="text-weight-bold text-h3 text-primary">More pools coming soon!</div>
+                <div class="text-body1 text-grey-8">Watch this space for upcoming quality projects, brought to you by RD Labs!</div>
+              </div>
           </div>
         </div>
       </div>

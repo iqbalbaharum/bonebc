@@ -41,41 +41,33 @@
           </q-card>
         </div>
 
-        <div>
-          <q-card>
-            <q-list separator class="text-grey-10">
-              <q-item class="text-weight-bold text-h6 text-primary">Token</q-item>
-              <q-item class="justify-between">
-                <span class="text-weight-bold">Name</span>
-                <span>Couldn't fetch data</span>
-              </q-item>
-              <q-item class="justify-between">
-                <span class="text-weight-bold">Symbol</span>
-                <span>Couldn't fetch data</span>
-              </q-item>
-              <q-item class="justify-between">
-                <span class="text-weight-bold">Decimals</span>
-                <span>Couldn't fetch data</span>
-              </q-item>
-              <q-item class="justify-between">
-                <span class="text-weight-bold">Address</span>
-                <span>Couldn't fetch data</span>
-              </q-item>
-              <q-item class="justify-between">
-                <span class="text-weight-bold">Total Supply</span>
-                <span>Couldn't fetch data</span>
-              </q-item>
-            </q-list>
-          </q-card>
-        </div>
-
       </div>
         
       <div class="col-md-5 col-sm-12 q-gutter-y-md">
-        <q-card class="bg-auditor-block q-pa-md q-pl-xl">
-          <div>Auditor Certification</div>
-          <div class="text-h5 text-weight-bold text-primary">Rug Detective</div>
-          <div class="text-caption">April 14th 2021</div>
+        <q-card>
+          <q-list separator class="text-grey-10">
+            <q-item class="text-weight-bold text-h6 text-primary">Token</q-item>
+            <q-item class="justify-between">
+              <span class="text-weight-bold">Name</span>
+              <span>Couldn't fetch data</span>
+            </q-item>
+            <q-item class="justify-between">
+              <span class="text-weight-bold">Symbol</span>
+              <span>Couldn't fetch data</span>
+            </q-item>
+            <q-item class="justify-between">
+              <span class="text-weight-bold">Decimals</span>
+              <span>Couldn't fetch data</span>
+            </q-item>
+            <q-item class="justify-between">
+              <span class="text-weight-bold">Address</span>
+              <span>Couldn't fetch data</span>
+            </q-item>
+            <q-item class="justify-between">
+              <span class="text-weight-bold">Total Supply</span>
+              <span>Couldn't fetch data</span>
+            </q-item>
+          </q-list>
         </q-card>
       </div>
     </div>
