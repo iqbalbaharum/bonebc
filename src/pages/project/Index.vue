@@ -158,7 +158,7 @@ export default {
       project: {
         icon: 'https://cdn.quasar.dev/img/avatar.png',
         title: 'RD Token',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus velit, cursus eget ultrices eget, aliquet vel risus. Aenean blandit eleifend tincidunt. Praesent viverra malesuada cursus. Morbi neque nunc, interdum et tempus vitae, sodales nec ante.',
+        description: 'The RD Token is the crypto engine which powers everything related to RD Labs, Auditors and Ventures. Holding this token will give you access to early stage investment allocations, content and regular tutorials covering all aspects of crypto, AMA´s and options to interact with other RD Familia members within the ecosystem.',
         currentVote: 10,
         totalVote: 90,
         maxBuy: 0.19,
