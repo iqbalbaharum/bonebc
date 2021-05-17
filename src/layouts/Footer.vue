@@ -1,17 +1,17 @@
 <template>
-  <div class="q-pt-md text-weight-bold">
+  <div class="q-pt-md q-mt-lg text-weight-bold bg-footer">
     <div class="bn-block items-center justify-center">
-      <div class="row q-my-md justify-between">
-        <img src="~assets/main/logo-transparent.png" style="width: 179px; height: 100px;" />
-        <div>
-          <div class="col">
-            <ul class="bn-links">
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Telegram</a></li>
-            </ul>
-          </div>
+      <div class="row q-my-md">
+        <div class="col">
+          <img src="~assets/main/logo-transparent.png" style="width: 179px; height: 100px;" />
+        </div>
+        <div class="col-3">
+          <ul class="bn-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Telegram</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -37,6 +37,6 @@ export default {
 
 <style lang="scss" scoped>
 .bg-footer {
-  background: linear-gradient(90deg, #F16E3C 27.47%, #F38C3F 71.49%);
+  background: linear-gradient(180deg, #F6F6F6 0%, rgba(246, 246, 246, 0) 100%);
 }
 </style>

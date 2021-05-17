@@ -9,14 +9,12 @@
             <div class="q-gutter-x-sm">
               <q-badge rounded color="positive">Open</q-badge>
               <q-badge rounded color="accent">BNB</q-badge>
-              <q-badge rounded color="accent">Binance</q-badge>
             </div>
 
             <div class="q-py-sm">
               <q-btn icon="fab fa-telegram" flat round class="bn-text-color-telegram" :to="project.channel.telegram" />
               <q-btn icon="fab fa-twitter" flat round class="bn-text-color-twitter" :to="project.channel.twitter" />
               <q-btn icon="fas fa-globe-asia" flat round :to="project.channel.website" />
-              <q-btn icon="fab fa-medium" flat round color="black" :to="project.channel.medium" />
             </div>
 
             <div class="text-grey-8 ellipsis-3-lines">

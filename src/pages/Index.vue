@@ -16,18 +16,25 @@
 
 
     <div class="bg-alt-block">
-      <div class="bn-screen full-width flex flex-center">
+      <div class="bn-screen full-width flex flex-center bg-grey-2">
         <div class="bn-block">
           <div class="items-center justify-center">
             <div class="row q-my-md q-gutter-md justify-center">
               <div class="col-md-12 q-py-md text-center">
                 <div class="text-weight-bold text-h3">Featured Project</div>
+                <div class="q-mt-md">
+                  <div class="">View Pools</div>
+                  <q-toggle
+                    color="green"
+                    v-model="toggle.featured"
+                  />
+                </div>
               </div>
               <q-card class="bn-card col-md-5 col-xs-12 q-pa-sm bg-yellow-2" v-for="(project, index) in projects" :key="index">
                 <q-card-section horizontal @click="onClickProject(project.id)" class="cursor-pointer">
                   <q-card-section avatar>
-                    <q-avatar size="80px">
-                      <img :src="project.icon">
+                    <q-avatar square size="80px">
+                      <q-img src="~assets/main/rd-logo.png" />
                     </q-avatar>
                   </q-card-section>
 
@@ -35,7 +42,6 @@
                     <div class="text-weight-bold text-h6">{{ project.title }}</div>
                     <div class="q-gutter-x-sm">
                       <q-badge rounded color="accent">BNB</q-badge>
-                      <q-badge rounded color="accent">Binance</q-badge>
                     </div>
                   </q-card-section>
                 </q-card-section>
@@ -66,11 +72,47 @@
                     <div class="">
                       <q-btn icon="fab fa-telegram" flat round color="accent" :to="project.channel.telegram" />
                       <q-btn icon="fas fa-globe-asia" flat round color="accent" :to="project.channel.website" />
-                      <q-btn icon="fab fa-medium" flat round color="accent" :to="project.channel.medium" />
                     </div>
                   </q-card-section>
                 </q-card-section>
               </q-card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="bn-screen full-width flex flex-center">
+        <div class="bn-block">
+          <div class="items-center justify-center">
+            <div class="row q-my-md q-gutter-md justify-center">
+              <div class="col-md-12 q-py-md text-center">
+                <div class="text-weight-bold text-h3">RD Projects Umbrella</div>
+              </div>
+            </div>
+            <div class="row items-center">
+              <div class="col-4 q-pa-md text-center">
+                <q-img src="~assets/logos/fomolab_logo.png" style="width: 50%;height:auto" />
+              </div>
+              <div class="col-4 q-pa-md text-center">
+                <q-img class="justify-center" src="~assets/logos/wault_logo.png" style="width: 50%;height:auto" />
+              </div>
+              <div class="col-4 q-pa-md text-center">
+                <q-img class="items-center" src="~assets/logos/wsb_logo.png" style="width: 30%;height:auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bn-block">
+          <div class="items-center justify-center">
+            <div class="row q-my-md q-gutter-md justify-center">
+              <div class="col-md-12 q-py-md text-center">
+                <div class="text-weight-bold text-h3">Featured Alumni</div>
+              </div>
+            </div>
+            <div class="row items-center">
+              <div class="col q-pa-md text-center">
+                <q-img src="~assets/logos/fomolab_logo.png" style="width: 20%;height:auto" />
+              </div>
             </div>
           </div>
         </div>
@@ -84,6 +126,9 @@
 export default {
   data() {
     return {
+      toggle: {
+        featured: true
+      },
       projects: [
         {
           id: 1,
@@ -98,8 +143,7 @@ export default {
           closeDate: new Date() + 1,
           channel: {
             telegram: '#',
-            website: '#',
-            medium: '#'
+            website: '#'
           }
         }
       ]

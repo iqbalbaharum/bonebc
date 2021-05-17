@@ -14,11 +14,6 @@
         <div class="text-h5 text-weight-bold text-white">RD Auditors</div>
         <div class="text-caption text-grey-8">11 April 2021</div>
       </div>
-      <div class="q-pa-md bn-bg-gradient-1">
-        <div class="text-body1 text-grey-8">Auditor Certification</div>
-        <div class="text-h5 text-weight-bold text-white">RD Auditors</div>
-        <div class="text-caption text-grey-8">11 April 2021</div>
-      </div>
     </div>
   </div>
 </template>

@@ -1,25 +1,7 @@
 <template>
-  <div class="row">
-     <div class="col-md-8 col-sm-12">
-       <div class="q-py-md q-gutter-x-md">
-        <q-btn label="whitepaper" outline color="black" :to="project.info.whitepaper" />
-        <q-btn label="tokenomic" outline color="black" :to="project.info.tokenomic" />
-      </div>
-      <div class="text-grey-8">{{ project.description }}</div>
-     </div>
-      
-    <div class="col-md-4 col-sm-12 q-gutter-y-md">
-      <div class="q-pa-md bn-bg-gradient-1">
-        <div class="text-body1 text-grey-8">Auditor Certification</div>
-        <div class="text-h5 text-weight-bold text-white">RD Auditors</div>
-        <div class="text-caption text-grey-8">11 April 2021</div>
-      </div>
-      <div class="q-pa-md bn-bg-gradient-1">
-        <div class="text-body1 text-grey-8">Auditor Certification</div>
-        <div class="text-h5 text-weight-bold text-white">RD Auditors</div>
-        <div class="text-caption text-grey-8">11 April 2021</div>
-      </div>
-    </div>
+  <div>
+    <div class="text-h4 text-weight-bold q-py-sm">Allocation Detail</div>
+     <q-table class="q-mt-md" :columns="columns" :data="data" />
   </div>
 </template>
 
@@ -33,7 +15,43 @@ export default {
   },
   data() {
     return {
-      
+      columns: [
+        { name: 'action', label: 'Action', field: 'action', sortable: true, align: 'center', headerClasses: 'text-primary text-weight-bold' },
+        { name: 'contribution', label: 'Contribution', field: 'contribution', sortable: true, align: 'center', headerClasses: 'text-primary text-weight-bold' },
+        { name: 'total', label: 'Total Tokens', field: 'total', sortable: true, align: 'center', headerClasses: 'text-primary text-weight-bold' },
+        { name: 'withdrawn', label: 'Withdrawn', field: 'withdrawn', sortable: true, align: 'center', headerClasses: 'text-primary text-weight-bold' },
+        { name: 'available', label: 'Available Now', field: 'available', sortable: true, align: 'center', headerClasses: 'text-primary text-weight-bold' },
+      ],
+      data: [
+        {
+          action: 'test',
+          contribution: 'test',
+          total: 'test',
+          withdrawn: 'test',
+          available: 'test'
+        },
+        {
+          action: 'test',
+          contribution: 'test',
+          total: 'test',
+          withdrawn: 'test',
+          available: 'test'
+        },
+        {
+          action: 'test',
+          contribution: 'test',
+          total: 'test',
+          withdrawn: 'test',
+          available: 'test'
+        },
+        {
+          action: 'test',
+          contribution: 'test',
+          total: 'test',
+          withdrawn: 'test',
+          available: 'test'
+        }
+      ]
     }
   },
 }
