@@ -16,7 +16,7 @@ const routes = [
           icon: '',
           roles: []
         },
-        component: () => import('pages/Index.vue')
+        component: () => import('src/pages/Index.vue')
       },
       {
         path: '/pools',

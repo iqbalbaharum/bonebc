@@ -1,116 +1,278 @@
 <template>
   <q-page>
-
     <div class="bn-screen text-white full-width flex flex-center text-center">
       <div class="bn-block q-gutter-y-md text-black">
-        <div class="text-h3 text-primary text-weight-bold">The epicenter of all things crypto</div>
-        <div class="text-body1">Welcome to the RD Familia, where you will learn everything crypto, finding, vetting, investing and supporting crypto projects.</div>
-        <div class="q-gutter-x-md">
-          <q-btn text-color="white" size="md" padding="sm lg" color="primary" class="bn-button" to="/pools"><span class="text-body1">View All Pools</span></q-btn>
+      </div>
+    </div>
+
+    <div class="bn-screen full-width flex flex-center text-center">
+      <div class="row bn-block items-center">
+        <div class="col-md-6 col-sm-12">
+          <div class="text-h2 text-primary">Background RD LABS</div>
+          <div class="text-h6 q-mt-md text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed dictum. Ut placerat dictum eros, ac ultrices ipsum fringilla quis. Morbi porta dapibus cursus. Sed vestibulum purus vitae neque posuere, vel semper tellus pharetra.
+          </div>
         </div>
-        <div>
-          <q-img src="~assets/main/main-block.png" style="width: 523px;height: 308px;"/>
+        <div class="col-md-5 offset-md-1 col-sm-12">
+          <q-img 
+            src="~assets/home/background-4x.png"
+            srcset="
+              ~assets/home/background-1x.png 1x
+              ~assets/home/background-4x.png 4x
+            "
+            style="height: 480px; height: 480px;"
+          />
         </div>
       </div>
     </div>
 
+    <div class="bn-screen bg-main-block full-width flex flex-center">
+      <div class="bn-block items-center justify-center">
+        <div class="text-center">
+          <div class="text-weight-bold text-h2 text-primary">RD Services</div>
+          <div class="text-subtitle1 text-bn-grey-2">Donec nec dolor a mi tempus tincidunt</div>
+        </div>
+        <div class="row justify-center q-my-xl">
+          <q-card class="bn-card bn-card-services">
+            <q-card-section>
+              <img src="~assets/home/service-audit.png"/>
+              <div class="text-h5 q-my-sm">RD Auditing</div>
+              <div class="text-body-1 text-bn-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed</div>
+            </q-card-section>
+          </q-card>
 
-    <div class="bg-alt-block">
-      <div class="bn-screen full-width flex flex-center bg-grey-2">
-        <div class="bn-block">
-          <div class="items-center justify-center">
-            <div class="row q-my-md q-gutter-md justify-center">
-              <div class="col-md-12 q-py-md text-center">
-                <div class="text-weight-bold text-h3">Featured Project</div>
-                <div class="q-mt-md">
-                  <div class="">View Pools</div>
-                  <q-toggle
-                    color="green"
-                    v-model="toggle.featured"
-                  />
-                </div>
-              </div>
-              <q-card class="bn-card col-md-5 col-xs-12 q-pa-sm bg-yellow-2 cursor-pointer" v-for="(project, index) in projects" :key="index">
-                <q-card-section horizontal>
-                  <q-card-section avatar>
-                    <q-avatar square size="80px">
-                      <q-img src="~assets/main/rd-logo.png" />
-                    </q-avatar>
-                  </q-card-section>
+          <q-card class="bn-card bn-card-services bn-card-gutter">
+            <q-card-section>
+              <img src="~assets/home/service-kyc.png" />
+              <div class="text-h5 q-my-sm">RD KYC</div>
+              <div class="text-body-1 text-bn-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed</div>
+            </q-card-section>
+          </q-card>
 
-                  <q-card-section>
-                    <div class="text-weight-bold text-h6">{{ project.title }}</div>
-                    <div class="q-gutter-x-sm">
-                      <q-badge rounded color="accent">BNB</q-badge>
-                    </div>
-                  </q-card-section>
+          <q-card class="bn-card bn-card-services">
+            <q-card-section>
+              <img src="~assets/home/service-research.png"/>
+              <div class="text-h5 q-my-sm">RD Research</div>
+              <div class="text-body-1 text-bn-grey-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed</div>
+            </q-card-section>
+          </q-card>
+        </div>
 
-                  <q-space />
-
-                  <q-card-section>
-                    <q-btn color="primary" label="Details" @click="onClickProject(project.id)"/>
-                  </q-card-section>
-                </q-card-section>
-
-                <q-card-section class="text-grey-8">
-                  <div class="ellipsis-3-lines">{{ project.description }}</div>
-                </q-card-section>
-
-                <q-card-section>
-                  <div class="text-weight-bold text-black">Progress</div>
-                  <q-linear-progress size="25px" :value="project.currentVote / project.totalVote" rounded color="primary">
-                    <div class="absolute-full flex flex-center">
-                      <q-badge color="white" text-color="accent" :label="`${(project.currentVote / project.totalVote * 100).toFixed(2)} %`" />
-                    </div>
-                  </q-linear-progress>
-                </q-card-section>
-
-                <q-card-section horizontal>
-                  <q-card-section>
-                    <div class="">
-                      <div class="text-weight-bold text-black">Max</div>
-                      <div class="text-h6 text-black">{{ project.maxBuy }} <span class="text-uppercase">{{ project.token }}</span></div>
-                    </div>
-                  </q-card-section>
-                  <q-space />
-                  <q-card-section>
-                    <div class="text-weight-bold text-black text-right">Links</div>
-                    <div class="">
-                      <q-btn icon="fab fa-telegram" flat round color="accent" :to="project.channel.telegram" />
-                      <q-btn icon="fas fa-globe-asia" flat round color="accent" :to="project.channel.website" />
-                    </div>
-                  </q-card-section>
-                </q-card-section>
-              </q-card>
-            </div>
-          </div>
+        <div class="col-md-12 justify-center text-center">
+          <q-btn label="MORE" color="primary" padding="sm lg" />
         </div>
       </div>
+    </div>
 
-       <div class="bn-screen full-width flex flex-center">
-        <div class="bn-block">
-          <div class="items-center justify-center">
-            <div class="row q-my-md q-gutter-md justify-center">
-              <div class="col-md-12 q-py-md text-center">
-                <div class="text-weight-bold text-h3">RD Projects Umbrella</div>
-              </div>
+    <div class="bg-main-block full-width flex flex-center">
+      <div class="bn-block items-center">
+        <div class="row items-center">
+          <div class="col-md-6">
+            <q-img src="~assets/home/community-4x.png" />
+          </div>
+          <div class="col-md-6 q-gutter-y-md">
+            <div class="text-h3 text-primary">RD Community</div>
+            <div class="text-h3 text-justify text-bn-grey-2">
+              Praesent magna arcu, aliquet a aliquet ac
             </div>
-            <div class="row items-center">
-              <div class="col-4 q-pa-md text-center">
-                <q-img src="~assets/logos/fomolab_logo.png" style="width: 50%;height:auto" />
-              </div>
-              <div class="col-4 q-pa-md text-center">
-                <q-img class="justify-center" src="~assets/logos/wault_logo.png" style="width: 50%;height:auto" />
-              </div>
-              <div class="col-4 q-pa-md text-center">
-                <q-img class="items-center" src="~assets/logos/wsb_logo.png" style="width: 30%;height:auto" />
-              </div>
+            <q-btn label="MORE" color="primary" padding="sm lg" />
+          </div>
+          <div class="col-md-12 col-sm-12">
+            <div class="text-h2 text-primary">RD Community</div>
+            <div class="text-body1 text-justify text-bn-grey-2">
+              In auctor felis eu orci volutpat tristique. Sed sollicitudin ligula posuere neque ullamcorper, ac viverra lectus consectetur. Nunc tempor mollis dapibus. Vivamus commodo euismod consequat. Integer finibus accumsan mi non blandit. Pellentesque lacinia risus at justo molestie, eu tincidunt quam dictum. Praesent egestas magna nec libero vulputate, id sodales sem posuere. Proin blandit, lectus at posuere porttitor, est ex venenatis felis, ac sagittis tellus ante sit amet est. Etiam tristique tincidunt tristique. Aenean malesuada blandit tristique. 
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
+    <div class="bn-screen bg-main-block full-width flex flex-center">
+      <div class="bn-block items-center justify-center">
+        <div class="text-center">
+          <div class="text-weight-bold text-h2 text-primary">RD Gems</div>
+          <div class="text-subtitle1 text-bn-grey-2">Donec nec dolor a mi tempus tincidunt</div>
+        </div>
+        <div class="row items-center">
+          <div class="col-md-6">
+            <q-img src="~assets/home/gems-4x.png" />
+          </div>
+          <div class="col-md-6 q-gutter-y-md">
+            <div class="text-h4">Donec nec dolor a mi tempus tincidunt</div>
+            <div class="text-body1 text-justify text-bn-grey-2">
+              In auctor felis eu orci volutpat tristique. Sed sollicitudin ligula posuere neque ullamcorper, ac viverra lectus consectetur. Nunc tempor mollis dapibus. Vivamus commodo euismod consequat. 
+            </div>
+            <q-btn label="MORE" color="primary" padding="sm lg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bn-screen bg-main-block full-width flex flex-center">
+      <div class="bn-block items-center justify-center">
+        <div class="row items-center">
+          <div class="col-md-6 q-gutter-y-md">
+            <div class="text-h2 text-primary">Investor & Membership</div>
+            <div class="text-body1 text-justify text-bn-grey-2">
+              In auctor felis eu orci volutpat tristique. Sed sollicitudin ligula posuere neque ullamcorper, ac viverra lectus consectetur. Nunc tempor mollis dapibus. Vivamus commodo euismod consequat. 
+            </div>
+            <q-btn label="MORE" color="primary" padding="sm lg" />
+          </div>
+          <div class="col-md-6">
+            <q-img src="~assets/home/investor-4x.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-main-block full-width flex flex-center">
+      <div class="bn-block items-center justify-center q-gutter-y-md">
+        <div class="text-center">
+          <div class="text-weight-bold text-h2 text-primary">Investor & Membership Tiers</div>
+        </div>
+        <div class="row justify-between q-my-xl">
+          <q-card class="col bn-card bn-card-tier text-center">
+            <q-card-section class="q-gutter-y-md">
+              <img src="~assets/tier/tier1-2x.png" style="max-width: 106px;max-height: 101.46px;"/>
+              <div class="text-h5 text-primary">Free Tier</div>
+              <div class="text-body2 text-bn-grey-1 text-left">
+                <ul>
+                  <li>Praesent sagittis</li>
+                  <li>Luctus dolor</li>
+                </ul>
+              </div>
+            </q-card-section>
+          </q-card>
+
+          <q-card class="col bn-card bn-card-tier text-center">
+            <q-card-section class="q-gutter-y-md">
+              <img src="~assets/tier/tier2-2x.png" style="max-width: 106px;max-height: 101.46px;"/>
+              <div class="text-h5 text-primary">Basic Tier</div>
+              <div class="text-body2 text-bn-grey-1 text-left">
+                <ul>
+                  <li>Praesent sagittis</li>
+                  <li>Luctus dolor</li>
+                </ul>
+              </div>
+            </q-card-section>
+          </q-card>
+
+          <q-card class="col bn-card bn-card-tier text-center">
+            <q-card-section class="q-gutter-y-md">
+              <img src="~assets/tier/tier3-2x.png" style="max-width: 106px;max-height: 101.46px;"/>
+              <div class="text-h5 text-primary">Advanced Tier</div>
+              <div class="text-body2 text-bn-grey-1 text-left">
+                <ul>
+                  <li>Praesent sagittis</li>
+                  <li>Luctus dolor</li>
+                </ul>
+              </div>
+            </q-card-section>
+          </q-card>
+
+          <q-card class="col bn-card bn-card-tier text-center">
+            <q-card-section class="q-gutter-y-md">
+              <img src="~assets/tier/tier4-2x.png" style="max-width: 106px;max-height: 101.46px;"/>
+              <div class="text-h5 text-primary">Elite Tier</div>
+              <div class="text-body2 text-bn-grey-1 text-left">
+                <ul>
+                  <li>Praesent sagittis</li>
+                  <li>Luctus dolor</li>
+                </ul>
+              </div>
+            </q-card-section>
+          </q-card>
+        </div>
+        <div class="text-h6 justify-center text-center text-bn-grey-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed dictum.
+Ut placerat dictum eros, ac ultrices ipsum fringilla quis. Morbi porta dapibus cursus. 
+        </div>
+        <div class="text-center">
+          <q-btn label="More" color="primary" padding="sm xl" no-caps />
+        </div>
+        <div class="row items-center">
+          <div class="col-md-8">
+            <q-img src="~assets/home/allocation-4x.png" />
+          </div>
+          <div class="col-md-4">
+            <div class="text-h3 text-primary">Public Sale Guaranteed Allocation</div>
+          </div>
+        </div>
+        <div class="text-body1 text-bn-grey-2">
+          In auctor felis eu orci volutpat tristique. Sed sollicitudin ligula posuere neque ullamcorper, ac viverra lectus consectetur. Nunc tempor mollis dapibus. Vivamus commodo euismod consequat. Integer finibus accumsan mi non blandit. Pellentesque lacinia risus at justo molestie, eu tincidunt quam dictum. Praesent egestas magna nec libero vulputate, id sodales sem posuere. Proin blandit, lectus at posuere porttitor, est ex venenatis felis, ac sagittis tellus ante sit amet est. Etiam tristique tincidunt tristique. Aenean malesuada blandit tristique. 
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-main-block full-width flex flex-center">
+      <div class="bn-block items-center justify-center">
+        <div class="text-center">
+          <div class="text-weight-bold text-h2 text-primary">Founders & Advisors</div>
+          <div class="text-subtitle1 text-bn-grey-2">Donec nec dolor a mi tempus tincidunt</div>
+        </div>
+        <div class="row justify-between q-my-xl">
+          <q-card class="col bn-card bn-card-advisor">
+            <img src="~assets/others/placeholder1-4x.png" style="width: 100%;max-height: 100%;"/>
+            <div class="text-h4 text-bn-grey-3 text-weight-bold">People 1</div>
+            <div class="text-subtitle1 text-primary text-weight-bold">CEO & Founder</div>
+            <div class="text-body1 text-bn-grey-2 text-justify q-my-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed dolor sit amet dolor
+            </div>
+            <div class="row q-gutter-x-sm">
+              <q-icon name="fab fa-linkedin" size="sm" />
+              <q-icon name="fab fa-twitter" size="sm"  />
+            </div>
+          </q-card>
+
+          <q-card class="col bn-card bn-card-advisor">
+            <img src="~assets/others/placeholder1-4x.png" style="width: 100%;max-height: 100%;"/>
+            <div class="text-h4 text-bn-grey-3 text-weight-bold">People 1</div>
+            <div class="text-subtitle1 text-primary text-weight-bold">CEO & Founder</div>
+            <div class="text-body1 text-bn-grey-2 text-justify q-my-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed dolor sit amet dolor
+            </div>
+            <div class="row q-gutter-x-sm">
+              <q-icon name="fab fa-linkedin" size="sm" />
+              <q-icon name="fab fa-twitter" size="sm"  />
+            </div>
+          </q-card>
+
+          <q-card class="col bn-card bn-card-advisor">
+            <img src="~assets/others/placeholder1-4x.png" style="width: 100%;max-height: 100%;"/>
+            <div class="text-h4 text-bn-grey-3 text-weight-bold">People 1</div>
+            <div class="text-subtitle1 text-primary text-weight-bold">CEO & Founder</div>
+            <div class="text-body1 text-bn-grey-2 text-justify q-my-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed dolor sit amet dolor
+            </div>
+            <div class="row q-gutter-x-sm">
+              <q-icon name="fab fa-linkedin" size="sm" />
+              <q-icon name="fab fa-twitter" size="sm"  />
+            </div>
+          </q-card>
+          
+          <q-card class="col bn-card bn-card-advisor">
+            <img src="~assets/others/placeholder1-4x.png" style="width: 100%;max-height: 100%;"/>
+            <div class="text-h4 text-bn-grey-3 text-weight-bold">People 1</div>
+            <div class="text-subtitle1 text-primary text-weight-bold">CEO & Founder</div>
+            <div class="text-body1 text-bn-grey-2 text-justify q-my-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque viverra nisl sed dolor sit amet dolor
+            </div>
+            <div class="row q-gutter-x-sm">
+              <q-icon name="fab fa-linkedin" size="sm" />
+              <q-icon name="fab fa-twitter" size="sm"  />
+            </div>
+          </q-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="full-width flex flex-center">
+      <div class="bn-block items-center justify-center text-center">
+        <img src="~assets/logos/discord-logo-2x.png" />
+      </div>
+    </div>
+
+
   </q-page>
 </template>
 
@@ -118,34 +280,55 @@
 export default {
   data() {
     return {
-      toggle: {
-        featured: true
-      },
-      projects: [
-        {
-          id: 1,
-          icon: 'https://cdn.quasar.dev/img/avatar.png',
-          title: 'RD Token',
-          description: 'The RD Token is the crypto engine which powers everything related to RD Labs, Auditors and Ventures. Holding this token will give you access to early stage investment allocations, content and regular tutorials covering all aspects of crypto, AMA´s and options to interact with other RD Familia members within the ecosystem.',
-          currentVote: 10,
-          totalVote: 90,
-          maxBuy: 0.19,
-          token: 'BNB',
-          openDate: new Date(),
-          closeDate: new Date() + 1,
-          channel: {
-            telegram: '#',
-            website: '#'
-          }
-        }
-      ]
+      
     }
   },
-
-  methods: {
-    onClickProject(id) {
-      this.$router.push({ path: `/project/${id}` })
-    }
-  }
 }
 </script>
+
+<style lang="scss" scoped>
+.bn-card {
+  position: static;
+  left: 280px;
+  top: 0px;
+
+  background: #FFFFFF;
+  /* Shadow 1 */
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.bn-card-services {
+  max-width: 261.33px;
+  height: 342px;
+  padding: 48px 32px;
+}
+
+.bn-card-tier {
+  max-width: 240.75px;
+  height: 526px;
+  padding: 48px 32px;
+}
+
+.bn-card-advisor {
+  max-width: 276px;
+  height: 526px;
+  padding: 32px 24px;
+}
+
+.bn-card-gutter {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.bn-card ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.bn-card ul li {
+  list-style-image: url('~assets/others/tick-1x.png');
+  margin-bottom: 32px;
+}
+</style>

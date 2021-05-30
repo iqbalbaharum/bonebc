@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "./gradient1.scss";
+@import "./typography.scss";
 
 * {
   font-family: "PT Sans", sans-serif;
@@ -10,7 +11,9 @@
     width: 1150px !important;
     margin: 0 auto;
     position: relative;
-    display: block;
+    // display: block;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .bn-screen {
@@ -21,13 +24,14 @@
 
 @media only screen and (max-width: 768px) {
   .bn-block {
-    padding: 20px;
+    padding: 40px;
     margin: 0 auto;
   }
 }
 
 .bg-main-block {
-  background: url("./../assets/home/bg.png") center no-repeat;
+  // background: url("./../assets/home/bg.png") center no-repeat;
+  background: linear-gradient(180deg, #f6f6f6 0%, rgba(246, 246, 246, 0) 100%);
 }
 
 .bg-alt-block {
