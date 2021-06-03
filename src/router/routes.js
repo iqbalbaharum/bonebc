@@ -69,6 +69,16 @@ const routes = [
         component: () => import('src/pages/Audit.vue')
       },
       {
+        path: '/kyc',
+        meta: {
+          title: '',
+          position: '',
+          icon: '',
+          roles: []
+        },
+        component: () => import('src/pages/Kyc.vue')
+      },
+      {
         path: '/pools',
         meta: {
           title: 'Pools',
