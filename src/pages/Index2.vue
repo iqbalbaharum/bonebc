@@ -87,7 +87,7 @@
         </div>
       </div>
 
-       <div class="bn-screen full-width flex flex-center">
+      <div class="bn-screen full-width flex flex-center">
         <div class="bn-block">
           <div class="items-center justify-center">
             <div class="row q-my-md q-gutter-md justify-center">

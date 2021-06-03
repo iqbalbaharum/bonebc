@@ -59,6 +59,16 @@ const routes = [
         component: () => import('src/pages/Family.vue')
       },
       {
+        path: '/audit',
+        meta: {
+          title: '',
+          position: '',
+          icon: '',
+          roles: []
+        },
+        component: () => import('src/pages/Audit.vue')
+      },
+      {
         path: '/pools',
         meta: {
           title: 'Pools',
