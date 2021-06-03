@@ -19,6 +19,46 @@ const routes = [
         component: () => import('src/pages/Index.vue')
       },
       {
+        path: '/services',
+        meta: {
+          title: 'RD Services',
+          position: 'header',
+          icon: '',
+          roles: []
+        },
+        component: () => import('src/pages/Services.vue')
+      },
+      {
+        path: '/launchpad',
+        meta: {
+          title: 'RD Launchpad',
+          position: 'header',
+          icon: '',
+          roles: []
+        },
+        component: () => import('src/pages/Launchpad.vue')
+      },
+      {
+        path: '/gems',
+        meta: {
+          title: 'RD Gems',
+          position: 'header',
+          icon: '',
+          roles: []
+        },
+        component: () => import('src/pages/Gems.vue')
+      },
+      {
+        path: '/family',
+        meta: {
+          title: 'RD Family',
+          position: 'header',
+          icon: '',
+          roles: []
+        },
+        component: () => import('src/pages/Family.vue')
+      },
+      {
         path: '/pools',
         meta: {
           title: 'Pools',

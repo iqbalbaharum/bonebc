@@ -1,22 +1,18 @@
 <template>
   <div class="q-pt-md q-mt-lg text-weight-bold bg-footer">
-    <div class="bn-block items-center justify-center">
-      <div class="row q-my-md">
-        <div class="col">
-          <img src="~assets/main/logo-transparent.png" style="width: 179px; height: 100px;" />
-        </div>
-        <div class="col-3">
-          <ul class="bn-links">
+    <div class="bn-block-footer items-center justify-center">
+      <div class="row q-my-md justify-between">
+        <img src="~assets/main/logo-transparent.png" style="width: 179px; height: 100px;" />
+        <ul class="bn-links">
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Telegram</a></li>
           </ul>
-        </div>
       </div>
     </div>
     <div class="full-width q-py-sm text-white bn-footer">
-        <div class="bn-block">
+        <div class="bn-block-footer">
           <div class="row justify-between">
             <span>© 2021 RD Labs. All rights reserved.</span>
             <span class="q-gutter-x-md">

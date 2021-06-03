@@ -286,28 +286,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.bn-card {
-  position: static;
-  left: 280px;
-  top: 0px;
-
-  background: #FFFFFF;
-  /* Shadow 1 */
-
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-}
+<style lang="scss">
 
 .bn-card-services {
-  max-width: 261.33px;
+  max-width: 249px;
   height: 342px;
-  padding: 48px 32px;
-}
-
-.bn-card-tier {
-  max-width: 240.75px;
-  height: 526px;
   padding: 48px 32px;
 }
 
@@ -315,20 +298,5 @@ export default {
   max-width: 276px;
   height: 526px;
   padding: 32px 24px;
-}
-
-.bn-card-gutter {
-  margin-left: 48px;
-  margin-right: 48px;
-}
-
-.bn-card ul {
-  padding: 0px;
-  margin: 0px;
-}
-
-.bn-card ul li {
-  list-style-image: url('~assets/others/tick-1x.png');
-  margin-bottom: 32px;
 }
 </style>

@@ -7,6 +7,12 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .bn-block-footer {
+    width: 1150px !important;
+    margin: 0 auto;
+    position: relative;
+  }
+
   .bn-block {
     width: 1150px !important;
     margin: 0 auto;
@@ -23,6 +29,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .bn-block-footer {
+    margin: 0 auto;
+  }
+
   .bn-block {
     padding: 40px;
     margin: 0 auto;
@@ -49,9 +59,39 @@
 }
 
 .bn-card {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  position: static;
+  left: 280px;
+  top: 0px;
+
+  background: #ffffff;
+  /* Shadow 1 */
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
 }
+
+.bn-card-tier {
+  max-width: 240.75px;
+  height: 526px;
+  padding: 48px 32px;
+}
+
+.bn-card-gutter {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.bn-card ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.bn-card ul li {
+  list-style-image: url("~assets/others/tick-1x.png");
+  margin-bottom: 32px;
+}
+
+/*** **/
 
 .bn-bg-gradient-1 {
   background: linear-gradient(270deg, #f49a44, #fbcc46);
